@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'movie',
     'rest_framework'
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,5 @@ SOCIALACCOUNT_PROVIDERS = {}
 
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
+
+ACCOUNT_FORMS = {'signup': 'movie.forms.CustomSignupForm'}
