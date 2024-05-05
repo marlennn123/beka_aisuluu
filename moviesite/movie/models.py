@@ -20,7 +20,23 @@ class Actor(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = "Актеры и кинорежиссеры"
+        verbose_name = "Актеры"
+
+
+class Director(models.Model):
+    name = models.CharField("Имя", "Фамилия", max_length=100)
+    age = models.PositiveSmallIntegerField("Возраст", default=0)
+    description = models.TextField("Описание")
+    image = models.ImageField("Изображение", upload_to='director/')
+
+
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Режиссеры"
+
 
 
 class Genre(models.Model):
